@@ -17,8 +17,8 @@ public class Client1 {
 	public static void main(String[] args) {
 		try {
 			//注 如果你不传入url 则其用默认的地址
-//			URL wsdlUrl = new URL("http://127.0.0.1:8080/cxf-spring/services/demoService?wsdl");
-			URL wsdlUrl = new URL("http://10.4.124.57:8080/cxf-spring/services/demoService?wsdl");
+			URL wsdlUrl = new URL("http://127.0.0.1:8080/cxf-spring/services/demoService?wsdl");
+//			URL wsdlUrl = new URL("http://10.4.124.57:8080/cxf-spring/services/demoService?wsdl");
 			WsDemoServiceService wss =new WsDemoServiceService(wsdlUrl);
 			WsDemoService servicePort=wss.getWsDemoServicePort();
 			String result=servicePort.sayHello("小天");
